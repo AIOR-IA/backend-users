@@ -25,5 +25,4 @@ export class User extends BaseEntity {
 
   @UpdateDateColumn()
   updatedAt: Date;
-  // Otras columnas y propiedades de la entidad
 }
