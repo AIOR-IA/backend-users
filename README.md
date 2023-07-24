@@ -13,3 +13,11 @@
   ```
   docker-compose up -d
   ``` 
+ 4. You need run the command
+  ```
+  npm run start:dev
+  ``` 
+ 5. You need run other command to typescript
+  ```
+  tsc --watch
+  ``` 

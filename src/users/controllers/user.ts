@@ -133,7 +133,7 @@ export const updateUser = async( req: Request, res: Response ) => {
     }
 }
 
-export const deleteUser = async( req: Request, res: Response ) => {
+export const changeStateUser = async( req: Request, res: Response ) => {
 
     const { id } = req.params;
 
@@ -146,8 +146,7 @@ export const deleteUser = async( req: Request, res: Response ) => {
                 msg: `User with id ${id} not found.`
             });
         }
-
-        user.isActive = false;
+        (user.isActive) ? user.isActive = false : user.isActive = true;
         user.updatedAt = new Date();
 
         await User.update({ id }, { ...user });
